@@ -1,4 +1,4 @@
-// 두 앱(관제실 :app · 기록 :history)이 같이 쓰는 것 — 연결·JSON·테마 주입·글자 크기·칸 레일·아이콘·Pretendard.
+// 앱(:app)이 쓰는 공통 모듈 — 연결·JSON·테마 주입·글자 크기·칸 레일·아이콘·Pretendard.
 // 색은 여기서 정하지 않는다. 앱이 CorePalette 를 주입한다(관제실 = Emerald Noir).
 import java.util.Properties
 

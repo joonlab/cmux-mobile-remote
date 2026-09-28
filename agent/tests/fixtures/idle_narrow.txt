@@ -1,15 +1,15 @@
-       t6 배분: run.completed 31.0s
-     tools=['skill_view', 'terminal',
-     'search_files', 'search_files', 'read_file']
-       t7 분담: run.completed 15.4s
-     tools=['skill_view', 'delegate_task']
-       t7 종합: run.completed 60.9s
+       step 6: done 31.0s
+     tools=['read', 'shell',
+     'search', 'search', 'read']
+       step 7: done 15.4s
+     tools=['read', 'write']
+       step 8: done 60.9s
      tools=['write_file']
-       t8 표본A: run.completed 18.0s
-     tools=['skill_view', 'terminal', 'terminal']
-     ERR ['terminal']
-       t8 표본B: run.completed 7.7s
-     tools=['terminal']
+       step 9: done 18.0s
+     tools=['read', 'shell', 'shell']
+     ERR ['shell']
+       step 10: done 7.7s
+     tools=['shell']
 
 ⏺ Bash(L=/tmp/demo/qa/rehearse_final2.log; for
   i in $(seq 1 55); do grep -q '"round"' $L &&

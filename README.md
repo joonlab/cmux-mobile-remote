@@ -141,10 +141,12 @@ cd android && ./dev.sh run      # 빌드 → adb 설치 → 실행 (./dev.sh bui
 | `CMR_MACHINE` | 호스트 이름 | 이 맥의 key. 앱 `cmr.machines` 의 key 와 맞춘다(`laptop`·`home`) |
 | `CMR_SEND` | `off` | `off` 읽기 전용 · `allowlist` 허용 목록과 에이전트가 만든 워크스페이스만 · `on` 전부 |
 | `CMR_SEND_ALLOW` | 비어 있음 | allowlist 모드에서 쓰기를 허용할 surface UUID(쉼표) |
-| `CMR_PEER_URL` / `CMR_PEER_NAME` | 비어 있음 | 상대 맥 에이전트 주소·이름. 이어가기 전에 «저쪽에서 돌고 있나»를 묻는다 |
+| `CMR_PEER_URL` / `CMR_PEER_NAME` | 비어 있음 / `다른 맥` | 상대 맥 에이전트 주소·이름. 이어가기 전에 «저쪽에서 돌고 있나»를 묻는다 |
 | `CMR_SCREENLOG` | `on` | 화면 적립 켜기/끄기 |
 | `CMR_DATA` | `agent/data` | 감사 로그·화면 적립·스니펫 폴더(git 에 안 올라감) |
 | `CMR_CLAUDE_DIR` | `~/.claude` | Claude Code 설정 폴더 |
+| `CMR_HAND_LIB` | `$CMR_CLAUDE_DIR/scripts/hand-lib.py` | 선택. 두 맥 사이 세션 소유 확인용 개인 도구 경로. 파일이 없으면 그 검사만 건너뜁니다(`agent/resume.py` 머리말 참고) |
+| `CMR_NAMES_FILE` | `session-names.json` | 선택. `CMR_CLAUDE_DIR` 안의 세션 이름표 파일 |
 
 스니펫: Raycast 에서 «Export Snippets» 한 JSON 을 `agent/data/snippets.json` 에 두면 됩니다. 비밀값이 든 스니펫이 있으면 그대로 폰에 실리니, 싣기 싫은 건 파일에서 빼 두세요.
 
