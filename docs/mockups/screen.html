@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="shot" content="w=1600,h=1000,scale=2">
+<title>대화 보기 · 화면 보기 · 여러 줄 보내기</title>
+<link rel="stylesheet" href="https://mockup-kit.invalid/kit.css">
+<script src="https://mockup-kit.invalid/kit.js"></script>
+<style>
+  .caption-top { position:absolute; top:34px; left:0; right:0; text-align:center; }
+  .layout { position:absolute; top:140px; left:0; right:0; bottom:0; display:flex; justify-content:center; align-items:flex-start; gap:44px; }
+  .chat { display:flex; flex-direction:column; gap:10px; }
+  .msg { font-size:13.5px; line-height:20px; white-space:pre-line; }
+  .tool { font-family: var(--mono); font-size:11.5px; color:var(--dim); padding:5px 10px; border-left:2px solid var(--border); }
+  .top-note { text-align:center; font-size:12px; color:var(--dim); padding:6px 0; border-bottom:1px dashed var(--border); }
+  .seg { align-self:stretch; }
+  .scr { font-family:var(--mono); font-size:11px; line-height:16px; white-space:pre-wrap; color:var(--text); }
+  .scr .d { color:var(--dim); } .scr .g { color:var(--accent); } .scr .w { color:var(--warn); }
+  .divl { display:flex; align-items:center; gap:8px; font-size:11.5px; color:var(--accent); font-weight:600; }
+  .divl::before, .divl::after { content:""; flex:1; height:1px; background: color-mix(in srgb, var(--accent) 50%, transparent); }
+  .gap { font-size:11.5px; color:var(--warn); text-align:center; padding:4px 0; }
+  .step-label { text-align:center; font-size:15px; font-weight:700; color:#1E2724; margin-top:14px; }
+  .dark .device-label { color:#5B6763; }
+  .input { font-size:14px; line-height:20px; white-space:pre-line; }
+  .snips { display:flex; gap:6px; padding:0 16px 6px; }
+</style>
+</head>
+<body>
+<div class="canvas app-cmux desk-accent">
+  <div class="caption-top">
+    <div class="canvas-title">대화는 처음까지, 화면은 밀려난 줄까지</div>
+    <div class="canvas-sub">Claude Code 는 스크롤백이 없어서 에이전트가 화면을 계속 찍어 위로 밀려난 줄만 쌓는다</div>
+  </div>
+  <div class="layout">
+
+    <!-- 대화 보기 -->
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.72">
+        <div class="screen">
+          <div class="status-bar" data-time="11:20"></div>
+          <div class="app-bar">
+            <span class="icon-btn"><i data-icon="arrow-left"></i></span>
+            <span class="title ellipsis">블로그 초안 다듬기</span>
+            <span class="spacer"></span>
+            <span class="icon-btn"><i data-icon="terminal"></i></span>
+          </div>
+          <div class="content">
+            <div class="top-note">대화의 처음입니다 · 위로 밀 때마다 120개씩 이어 붙음</div>
+            <div class="chat">
+              <div class="msg me">초안 세 편 맞춤법만 먼저 봐 줘</div>
+              <div class="tool">Read drafts/01-camping.md</div>
+              <div class="msg">1편에서 띄어쓰기 7곳을 고쳤습니다. 표현은 그대로 두었습니다.</div>
+              <div class="msg me">좋아. 2편은 제목도 짧게</div>
+              <div class="tool">Edit drafts/02-market.md</div>
+              <div class="msg">제목을 「주말 장터 산책」으로 줄였습니다.</div>
+            </div>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+      <div class="step-label">대화 보기</div>
+      <div class="device-label">터미널 덤프가 아니라 채팅처럼</div>
+    </div>
+
+    <!-- 화면 보기 -->
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.72">
+        <div class="screen">
+          <div class="status-bar" data-time="11:21"></div>
+          <div class="app-bar">
+            <span class="icon-btn"><i data-icon="arrow-left"></i></span>
+            <span class="title ellipsis">블로그 초안 다듬기</span>
+            <span class="spacer"></span>
+            <span class="icon-btn filled"><i data-icon="terminal"></i></span>
+          </div>
+          <div class="content">
+            <div class="scr"><span class="d">⏺ Read(drafts/03-garden.md)</span>
+  ⎿ Read 84 lines
+<span class="d">⏺ Update(drafts/03-garden.md)</span>
+  ⎿ Updated with 5 additions</div>
+            <div class="gap">⋯⋯ 사이 내용이 빠졌을 수 있습니다</div>
+            <div class="scr">⏺ 3편 문단 순서를 바꿨습니다.
+  씨앗 → 물주기 → 수확 순입니다.</div>
+            <div class="divl">지금 화면</div>
+            <div class="scr"><span class="g">✻</span> Working… (48s · ↓ 1.2k tokens)
+  ⎿ <span class="w">Agent</span> 초안 교차 검토 · 2분
+
+──────────────────────────────
+❯ </div>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+      <div class="step-label">화면 보기</div>
+      <div class="device-label">적립된 화면 + 지금 화면</div>
+    </div>
+
+    <!-- 여러 줄 보내기 -->
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.72">
+        <div class="screen">
+          <div class="status-bar" data-time="11:23"></div>
+          <div class="app-bar">
+            <span class="icon-btn"><i data-icon="arrow-left"></i></span>
+            <span class="title ellipsis">블로그 초안 다듬기</span>
+            <span class="spacer"></span>
+            <span class="tag">입력 대기</span>
+          </div>
+          <div class="content">
+            <div class="chat">
+              <div class="msg">세 편 모두 끝났습니다. 다음은 무엇을 할까요?</div>
+              <div class="msg me">좋아. 다음 순서로 해 줘
+1) 태그를 세 개씩 달기
+2) 요약 한 줄씩
+3) 끝나면 목록으로 보여 줘</div>
+              <div class="caption" style="align-self:flex-end">보냄 · 한 메시지로 들어감</div>
+            </div>
+          </div>
+          <div class="snips"><span class="chip">;cc</span><span class="chip">;work</span><span class="chip">;auq</span></div>
+          <div class="input-bar">
+            <div class="input placeholder">메시지…</div>
+            <span class="send-btn"><i data-icon="send"></i></span>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+      <div class="step-label">여러 줄 보내기</div>
+      <div class="device-label">줄 사이에 shift+enter 를 끼워 한 번에 제출</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

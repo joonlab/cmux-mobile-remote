@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 대시보드 tokens.css 다크 바탕(Emerald Noir 의 bg 토큰) -->
+    <color name="launcher_bg">#0A0F0D</color>
+</resources>

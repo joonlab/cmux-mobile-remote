@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 기록 앱(fold-claude-history, 별도 저장소)이 깔려 있나 알아야 «전체 기록» 버튼을 숨길 수 있다(Android 11+ 패키지 가시성) -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <!-- 호스트까지 적어야 한다 — 스킴만 적으면 기록 앱 필터(호스트 session 필수)와 안 맞아 가시성이 안 열린다(실측) -->
+            <data android:scheme="cchistory" android:host="session" />
+        </intent>
+    </queries>
+
+    <!-- 에이전트는 tailscale serve 의 HTTPS(정식 인증서)로만 받는다 → cleartext 허용이 필요 없다. -->
+    <application
+        android:label="cmux 관제실"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@android:style/Theme.Material.NoActionBar"
+        android:supportsRtl="true">
+
+        <!-- 폴드: 접힘·펼침 크기 변화를 스스로 감당한다는 선언(size compat 으로 얼리지 않게) -->
+        <meta-data android:name="android.supports_size_changes" android:value="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|density|uiMode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- D7: cmuxremote://tab/{machine}/{surfaceId} · cmuxremote://resume/{sid} — 기록 앱에서 온다 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="cmuxremote" android:host="tab" />
+                <data android:scheme="cmuxremote" android:host="resume" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

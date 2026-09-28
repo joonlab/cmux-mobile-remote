@@ -1,0 +1,29 @@
+       t6 배분: run.completed 31.0s
+     tools=['skill_view', 'terminal',
+     'search_files', 'search_files', 'read_file']
+       t7 분담: run.completed 15.4s
+     tools=['skill_view', 'delegate_task']
+       t7 종합: run.completed 60.9s
+     tools=['write_file']
+       t8 표본A: run.completed 18.0s
+     tools=['skill_view', 'terminal', 'terminal']
+     ERR ['terminal']
+       t8 표본B: run.completed 7.7s
+     tools=['terminal']
+
+⏺ Bash(L=/tmp/demo/qa/rehearse_final2.log; for
+  i in $(seq 1 55); do grep -q '"round"' $L &&
+  break; sleep 10; done; tail -22 $L)
+     (ctrl+b to run in background)
+
+✢ Thinking… (3m 43s · ↓ 485 tokens)
+  ⎿  Tip: Hit shift+tab to cycle between manual 
+     mode, auto-accept edit mode, and plan mode
+  current: 2.1.281 ·… ✔ Update installed · Rest…
+──────────────────────────────────────────────────
+❯ 
+──────────────────────────────────────────────────
+  [Opus (1M context)] 📁 demo · 상태줄 예시 …
+  🕐 ▓▓▓░░ 74% │ 📆 ▓▓▓░░ 66% │ 📖…
+  📅 오늘 일정 예시 · 장보기 목록…
+  ⏵⏵ bypass permissions on · 1 shell · ← 2 agen…

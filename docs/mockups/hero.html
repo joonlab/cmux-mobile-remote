@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="shot" content="w=1600,h=1000,scale=2">
+<title>cmux 모바일 관제실 — 구성</title>
+<link rel="stylesheet" href="https://mockup-kit.invalid/kit.css">
+<script src="https://mockup-kit.invalid/kit.js"></script>
+<style>
+  .layout { position: absolute; top: 150px; left: 0; right: 0; bottom: 0; display: flex; align-items: flex-start; justify-content: center; gap: 30px; }
+  .sec { display:flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; color:var(--dim); margin-top:4px; }
+  .sec .n { margin-left:auto; font-weight:600; }
+  .tab { display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:12px; background:var(--panel); border:1px solid var(--border); }
+  .tab .ico { font-size:18px; margin-top:2px; }
+  .tab .t { font-size:14px; font-weight:600; line-height:20px; }
+  .tab .s { font-size:12px; color:var(--dim); line-height:17px; }
+  .tab.lock { border-color: color-mix(in srgb, var(--warn) 55%, transparent); background: color-mix(in srgb, var(--warn) 10%, var(--panel)); }
+  .tab.lock .ico { color: var(--warn); }
+  .tab.run .ico { color: var(--accent); }
+  .tab.sel { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+  .tab.idle { opacity:.72 }
+  .col-list { display:flex; flex-direction:column; gap:8px; }
+  .chat { display:flex; flex-direction:column; gap:10px; }
+  .tool { font-family: var(--mono); font-size:12px; color:var(--dim); padding:6px 10px; border-left:2px solid var(--border); }
+  .askcard { border:1px solid color-mix(in srgb, var(--warn) 55%, transparent); background: color-mix(in srgb, var(--warn) 9%, var(--panel)); border-radius:14px; padding:12px; display:flex; flex-direction:column; gap:8px; }
+  .opt { padding:9px 12px; border-radius:10px; background:var(--panel2); border:1px solid var(--border); font-size:13.5px; }
+  .opt.on { border-color: var(--accent); background: var(--accent-tint); }
+  .macs { display:flex; flex-direction:column; gap:16px; width: 470px; margin-top: 20px; }
+  .terminal { height: 250px; }
+  .terminal-body { font-size: 12px; line-height: 18px; }
+  .caption-top { position:absolute; top:34px; left:0; right:0; text-align:center; }
+</style>
+</head>
+<body>
+<div class="canvas app-cmux desk-accent">
+  <div class="caption-top">
+    <div class="canvas-title">폰 한 대로 두 맥의 cmux 를 본다</div>
+    <div class="canvas-sub">맥마다 에이전트 하나 · 앱이 두 맥에 직접 붙는다 · 나를 기다리는 탭이 맨 위</div>
+  </div>
+  <div class="layout">
+
+    <!-- 펼친 화면 -->
+    <div class="dark">
+      <div class="fold-open" style="--zoom:.74">
+        <div class="screen">
+          <div class="status-bar" data-time="9:41"></div>
+          <div class="app-bar">
+            <img class="mark" data-app="cmux" alt="">
+            <span class="title">cmux 관제실</span>
+            <span class="status"><span class="dot ok"></span>연결 2/2</span>
+            <span class="spacer"></span>
+            <span class="icon-btn"><i data-icon="list-checks"></i></span>
+            <span class="theme-btn"><i data-icon="moon"></i><span>다크</span></span>
+          </div>
+          <div class="two-pane list-detail">
+            <div class="pane">
+              <div class="sec"><i data-icon="lock"></i>나를 기다림<span class="n">2</span></div>
+              <div class="col-list">
+                <div class="tab lock sel"><i class="ico" data-icon="lock"></i><div class="grow"><div class="t ellipsis">장보기 앱 리팩터</div><div class="s ellipsis">노트북 · 질문 대기 · 방금</div></div></div>
+                <div class="tab lock"><i class="ico" data-icon="lock"></i><div class="grow"><div class="t ellipsis">사진 정리 스크립트</div><div class="s ellipsis">홈맥 · 권한 대기 · Bash</div></div></div>
+              </div>
+              <div class="sec"><i data-icon="zap"></i>진행 중 · 방금 끝남<span class="n">3</span></div>
+              <div class="col-list">
+                <div class="tab run"><i class="ico" data-icon="refresh"></i><div class="grow"><div class="t ellipsis">회의 메모 요약기</div><div class="s ellipsis">노트북 · 작업 중 · 2분</div></div></div>
+                <div class="tab run"><i class="ico" data-icon="sparkle"></i><div class="grow"><div class="t ellipsis">블로그 초안 다듬기</div><div class="s ellipsis">홈맥 · 뒤에서 에이전트 2 · 6분</div></div></div>
+                <div class="tab"><i class="ico" data-icon="check"></i><div class="grow"><div class="t ellipsis">레시피 사이트 스타일</div><div class="s ellipsis">노트북 · 방금 끝남 · 4분 전</div></div></div>
+              </div>
+              <div class="sec"><i data-icon="laptop"></i>노트북<span class="n">유휴 9 보기</span></div>
+              <div class="col-list">
+                <div class="tab idle"><i class="ico" data-icon="clock"></i><div class="grow"><div class="t ellipsis">여행 일정표</div><div class="s ellipsis">입력 대기 · 1시간 전</div></div></div>
+              </div>
+            </div>
+            <div class="pane">
+              <div class="row"><span class="tag warn">질문 대기</span><span class="meta">노트북 · 장보기 앱 리팩터</span></div>
+              <div class="chat">
+                <div class="msg me">목록 저장 방식을 바꾸자. 선택지 정리해서 물어봐 줘</div>
+                <div class="tool">Read src/store/list.ts · Grep "saveList"</div>
+                <div class="msg">지금은 파일 하나에 통째로 씁니다. 방식을 골라 주세요.</div>
+                <div class="askcard">
+                  <div class="card-title">목록을 어디에 저장할까요?</div>
+                  <div class="opt on">기기 안 데이터베이스 (Recommended)</div>
+                  <div class="opt">JSON 파일 그대로</div>
+                  <div class="opt">기타 — 직접 입력</div>
+                  <div class="row gap-8"><span class="btn btn-primary grow"><i data-icon="send"></i>답 보내기</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+      <div class="device-label">펼친 화면 · 목록 | 대화</div>
+    </div>
+
+    <!-- 커버 화면 -->
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.74">
+        <div class="screen">
+          <div class="status-bar" data-time="9:41"></div>
+          <div class="app-bar">
+            <img class="mark" data-app="cmux" alt="">
+            <span class="title">관제실</span>
+            <span class="spacer"></span>
+            <span class="icon-btn"><i data-icon="plus"></i></span>
+          </div>
+          <div class="content">
+            <div class="card warn">
+              <div class="card-row"><i data-icon="lock"></i><span class="card-title">나를 기다림 2</span></div>
+              <div class="meta">노트북 질문 1 · 홈맥 권한 1</div>
+            </div>
+            <div class="sec"><i data-icon="laptop"></i>노트북<span class="n">claude 12</span></div>
+            <div class="col-list">
+              <div class="tab lock"><i class="ico" data-icon="lock"></i><div class="grow"><div class="t ellipsis">장보기 앱 리팩터</div><div class="s ellipsis">질문 대기</div></div></div>
+              <div class="tab run"><i class="ico" data-icon="refresh"></i><div class="grow"><div class="t ellipsis">회의 메모 요약기</div><div class="s ellipsis">작업 중 · 2분</div></div></div>
+            </div>
+            <div class="sec"><i data-icon="monitor"></i>홈맥<span class="n">claude 5</span></div>
+            <div class="col-list">
+              <div class="tab lock"><i class="ico" data-icon="lock"></i><div class="grow"><div class="t ellipsis">사진 정리 스크립트</div><div class="s ellipsis">권한 대기 · Bash</div></div></div>
+              <div class="tab run"><i class="ico" data-icon="sparkle"></i><div class="grow"><div class="t ellipsis">블로그 초안 다듬기</div><div class="s ellipsis">뒤에서 에이전트 2</div></div></div>
+            </div>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+      <div class="device-label">커버 화면 · 한 손으로</div>
+    </div>
+
+    <!-- 두 맥 -->
+    <div class="macs">
+      <div class="terminal">
+        <div class="terminal-bar"><span class="traffic"><i></i><i></i><i></i></span><span class="t-title">노트북 · cmux — 장보기 앱 리팩터</span></div>
+        <div class="terminal-body"><span class="t-dim">⏺ Read(src/store/list.ts)</span>
+<span class="t-b">목록을 어디에 저장할까요?</span>
+
+<span class="t-accent">❯ 1. 기기 안 데이터베이스 (Recommended)</span>
+  2. JSON 파일 그대로
+  3. Type something.
+
+<span class="t-dim">Enter to select · ↑/↓ to navigate</span></div>
+      </div>
+      <div class="terminal">
+        <div class="terminal-bar"><span class="traffic"><i></i><i></i><i></i></span><span class="t-title">홈맥 · cmux — 사진 정리 스크립트</span></div>
+        <div class="terminal-body"><span class="t-dim">⏺ Bash(python3 organize.py --dry-run)</span>
+ Run shell command
+
+ <span class="t-b">Do you want to proceed?</span>
+<span class="t-accent"> ❯ 1. Yes</span>
+   2. No
+
+<span class="t-dim"> Esc to cancel · Tab to amend</span></div>
+      </div>
+      <div class="device-label">맥 두 대 · 각자 에이전트(127.0.0.1 + tailnet HTTPS)</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

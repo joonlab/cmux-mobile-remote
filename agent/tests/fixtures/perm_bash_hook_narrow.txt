@@ -1,0 +1,23 @@
+   │ $S/out035330_final.txt; ~/.pyenv/versio
+   │ ns/3.12.10/bin/python3
+   │ ~/work/demo-project/demo/verify/verify_n
+   │ umbers.py --round
+   │ $S/copy011142/r0925-011142 --out
+   │ $S/out011142_final >
+   │ $S/out011142_final.txt 2>&1; echo rc=$?;
+   Run shell command
+
+ │ Hook PreToolUse:Bash requires confirmation for
+ │ this command:
+ │ [danger-guard] rm 으로 직접 삭제하려 합니다.
+ │ CLAUDE.md 규칙은 휴지통 이동 + moves.csv
+ │ 로그를 요구합니다. 복구 불가한 삭제가 맞는지
+ │ 확인해 주세요.
+ │   대상: /dev/null
+ settings.json to update hooks
+  
+ Do you want to proceed?
+ ❯ 1. Yes
+   2. No
+
+ Esc to cancel · Tab to amend

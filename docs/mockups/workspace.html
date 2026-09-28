@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="shot" content="w=1600,h=1000,scale=2">
+<title>창별 보기 · 새 워크스페이스 · 맥 따라가기</title>
+<link rel="stylesheet" href="https://mockup-kit.invalid/kit.css">
+<script src="https://mockup-kit.invalid/kit.js"></script>
+<style>
+  .caption-top { position:absolute; top:34px; left:0; right:0; text-align:center; }
+  .layout { position:absolute; top:140px; left:0; right:0; bottom:0; display:flex; justify-content:center; align-items:flex-start; gap:36px; }
+  .win { border:1px solid var(--border); border-radius:12px; background:var(--panel); padding:10px; display:flex; flex-direction:column; gap:6px; }
+  .win-h { display:flex; align-items:center; gap:6px; font-size:12.5px; font-weight:700; color:var(--dim); }
+  .ws { border-radius:10px; background:var(--panel2); padding:8px 10px; display:flex; flex-direction:column; gap:4px; border-left:3px solid var(--c, var(--border)); }
+  .ws-t { font-size:13.5px; font-weight:600; display:flex; align-items:center; gap:6px; }
+  .ws-t .meta { margin-left:auto; }
+  .sf { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--dim); }
+  .sf i { font-size:13px; }
+  .sf.claude { color:var(--text); }
+  .sf.on { color:var(--accent); font-weight:600; }
+  .dialog { background:var(--raised); border:1px solid var(--border); border-radius:20px; padding:16px; display:flex; flex-direction:column; gap:8px; box-shadow: var(--shadow-float); }
+  .field { background:var(--panel2); border:1px solid var(--border); border-radius:10px; padding:9px 12px; font-size:14px; }
+  .field.mono { font-family:var(--mono); font-size:13px; }
+  .note { font-size:12px; color:var(--dim); }
+  .picks { display:flex; flex-wrap:wrap; gap:6px; }
+  .mac-window { width: 520px; height: 540px; }
+  .mac-sidebar { width: 200px; }
+  .sb-item { font-size: 12.5px; }
+  .mac-body { padding: 0; }
+  .tb { display:flex; gap:0; border-bottom:1px solid var(--border); font-size:12px; }
+  .tb span { padding:7px 12px; color:var(--dim); border-right:1px solid var(--border); }
+  .tb span.on { color:var(--text); background:var(--panel); font-weight:600; }
+  .term { background:#0E1110; color:#D8E0DC; font-family:var(--mono); font-size:11.5px; line-height:17px; padding:12px; height: 100%; white-space:pre-wrap; }
+  .term .g { color:#3FC79A; } .term .d { color:#7C8884; }
+  .ping { position:absolute; left:50%; top:-14px; transform:translateX(-50%); }
+</style>
+</head>
+<body>
+<div class="canvas app-cmux desk-accent">
+  <div class="caption-top">
+    <div class="canvas-title">창별 보기에서 워크스페이스를 만들고, 누르면 맥 화면이 따라온다</div>
+    <div class="canvas-sub">워크스페이스 생성·이름·닫기 · 스니펫(;cc) 자동 확장 · «맥 화면 따라가기» 켜면 맥 cmux 가 그 탭으로 이동</div>
+  </div>
+  <div class="layout">
+
+    <div class="dark">
+      <div class="fold-open" style="--zoom:.74">
+        <div class="screen">
+          <div class="status-bar" data-time="10:05"></div>
+          <div class="app-bar">
+            <img class="mark" data-app="cmux" alt="">
+            <span class="title">창별 보기</span>
+            <span class="status"><span class="dot ok"></span>맥 화면 따라가기 켜짐</span>
+            <span class="spacer"></span>
+            <span class="switch on"></span>
+          </div>
+          <div class="two-pane list-detail">
+            <div class="pane">
+              <div class="win">
+                <div class="win-h"><i data-icon="laptop"></i>노트북 · 창 1 · 활성</div>
+                <div class="ws" style="--c:#3FC79A">
+                  <div class="ws-t">장보기 앱<span class="meta">탭 3</span></div>
+                  <div class="sf claude on"><i data-icon="sparkle"></i>리팩터 · 작업 중</div>
+                  <div class="sf"><i data-icon="terminal"></i>zsh · 개발 서버</div>
+                </div>
+                <div class="ws" style="--c:#E0B25A">
+                  <div class="ws-t">회의 메모<span class="meta">탭 2</span></div>
+                  <div class="sf claude"><i data-icon="sparkle"></i>요약기 · 질문 대기</div>
+                </div>
+              </div>
+              <div class="win">
+                <div class="win-h"><i data-icon="monitor"></i>홈맥 · 창 1</div>
+                <div class="ws" style="--c:#7AA8F0">
+                  <div class="ws-t">사진 정리<span class="meta">탭 2</span></div>
+                  <div class="sf claude"><i data-icon="sparkle"></i>스크립트 · 권한 대기</div>
+                  <div class="sf"><i data-icon="terminal"></i>zsh</div>
+                </div>
+                <div class="ws">
+                  <div class="ws-t">블로그<span class="meta">탭 1</span></div>
+                  <div class="sf claude"><i data-icon="sparkle"></i>초안 다듬기 · 뒤에서 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="pane">
+              <div class="dialog">
+                <div class="sheet-title">새 워크스페이스</div>
+                <div class="note">이름</div>
+                <div class="field">여행 일정표</div>
+                <div class="note">폴더(cwd)</div>
+                <div class="field">~/projects/trip</div>
+                <div class="picks"><span class="chip">~</span><span class="chip on">~/projects/trip</span><span class="chip">~/projects/shop</span></div>
+                <div class="note">시작 명령 — 스니펫 그대로 됩니다</div>
+                <div class="picks"><span class="chip filled">;cc</span><span class="chip">;work</span><span class="chip">;auq</span></div>
+                <div class="field mono">claude --dangerously-skip-permissions</div>
+                <div class="note">창</div>
+                <div class="picks"><span class="chip on">노트북 창 1 · 활성</span><span class="chip">노트북 창 2</span></div>
+                <div class="row gap-8" style="justify-content:flex-end"><span class="btn btn-ghost">취소</span><span class="btn btn-primary"><i data-icon="plus"></i>만들기</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+      <div class="device-label" style="color:#5B6763">펼친 화면 · 창 목록 | 새 워크스페이스</div>
+    </div>
+
+    <div style="position:relative; margin-top:60px">
+      <div class="mac-window dark">
+        <div class="mac-titlebar"><span class="traffic"><i></i><i></i><i></i></span><span class="mac-title">cmux — 노트북</span></div>
+        <div class="mac-split">
+          <div class="mac-sidebar">
+            <div class="sb-head">워크스페이스</div>
+            <div class="sb-item on">장보기 앱</div>
+            <div class="sb-item">회의 메모</div>
+            <div class="sb-item">여행 일정표</div>
+          </div>
+          <div class="mac-body" style="display:flex; flex-direction:column">
+            <div class="tb"><span class="on">리팩터</span><span>zsh · 개발 서버</span></div>
+            <div class="term"><span class="d">⏺ Update(src/store/list.ts)</span>
+  ⎿  Updated with 24 additions
+
+<span class="d">⏺ Bash(npm test -- store)</span>
+  ⎿  <span class="g">PASS</span> store/list.test.ts
+     12 passed
+
+<span class="g">✻</span> Working… (1m 12s)
+
+──────────────────────────
+❯ </div>
+          </div>
+        </div>
+      </div>
+      <div class="device-label" style="color:#5B6763">폰에서 누른 탭이 맥 cmux 에서 앞으로 온다</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

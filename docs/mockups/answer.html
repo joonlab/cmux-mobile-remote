@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="shot" content="w=1600,h=1000,scale=2">
+<title>권한·질문에 폰에서 답하기</title>
+<link rel="stylesheet" href="https://mockup-kit.invalid/kit.css">
+<script src="https://mockup-kit.invalid/kit.js"></script>
+<style>
+  .caption-top { position:absolute; top:34px; left:0; right:0; text-align:center; }
+  .layout { position:absolute; top:140px; left:0; right:0; bottom:0; display:flex; justify-content:center; align-items:flex-start; gap:44px; }
+  .sheet { position:absolute; left:0; right:0; bottom:0; z-index:41; background:var(--raised); border-top:1px solid var(--border); border-radius:24px 24px 0 0; padding:8px 16px 34px; display:flex; flex-direction:column; gap:10px; }
+  .opt { display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:12px; background:var(--panel2); border:1px solid var(--border); font-size:14px; line-height:20px; }
+  .opt .n { font-family:var(--mono); color:var(--dim); width:16px; flex:none; }
+  .opt .d { font-size:12px; color:var(--dim); line-height:17px; }
+  .opt.on { border-color:var(--accent); background:var(--accent-tint); }
+  .box { width:18px; height:18px; border-radius:5px; border:1.5px solid var(--dim); flex:none; margin-top:1px; display:inline-flex; align-items:center; justify-content:center; font-size:13px; }
+  .box.on { background:var(--accent); border-color:var(--accent); color:var(--on-accent); }
+  .cmd { font-family:var(--mono); font-size:12px; line-height:18px; background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:10px; white-space:pre-wrap; }
+  .steps { display:flex; gap:6px; }
+  .steps span { flex:1; height:4px; border-radius:2px; background:var(--border); }
+  .steps span.on { background:var(--accent); }
+  .msg { font-size:13.5px; line-height:20px; }
+  .chat { display:flex; flex-direction:column; gap:10px; }
+  .step-label { text-align:center; font-size:15px; font-weight:700; color:#1E2724; margin-top:14px; }
+  .dark .device-label { color:#5B6763; }
+</style>
+</head>
+<body>
+<div class="canvas app-cmux desk-accent">
+  <div class="caption-top">
+    <div class="canvas-title">Claude 가 묻고, 저는 폰에서 답한다</div>
+    <div class="canvas-sub">키 하나 보낼 때마다 맥 화면을 다시 읽는다 · 검토 화면의 답이 폰의 답과 같을 때만 제출</div>
+  </div>
+  <div class="layout">
+
+    <!-- 1 권한 -->
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.72">
+        <div class="screen">
+          <div class="status-bar" data-time="9:41"></div>
+          <div class="app-bar">
+            <span class="icon-btn"><i data-icon="arrow-left"></i></span>
+            <span class="title ellipsis">사진 정리 스크립트</span>
+            <span class="spacer"></span>
+            <span class="tag warn">권한 대기</span>
+          </div>
+          <div class="content">
+            <div class="chat">
+              <div class="msg me">중복 사진 찾아서 폴더로 옮기는 스크립트 돌려 봐</div>
+              <div class="msg">먼저 미리보기로 돌려 보겠습니다.</div>
+            </div>
+          </div>
+          <div class="scrim"></div>
+          <div class="sheet">
+            <div class="sheet-handle"></div>
+            <div class="row"><i data-icon="lock"></i><span class="sheet-title">Bash 를 실행할까요?</span></div>
+            <div class="cmd">python3 organize.py --dry-run
+  --src ~/Pictures/정리전</div>
+            <div class="caption">홈맥 · 화면에서 읽은 요청 그대로</div>
+            <div class="opt on"><span class="n">1</span><div class="grow">Yes</div></div>
+            <div class="opt"><span class="n">2</span><div class="grow">Yes, and don't ask again for this command</div></div>
+            <div class="opt"><span class="n">3</span><div class="grow">No</div></div>
+            <span class="btn btn-primary btn-block"><i data-icon="check"></i>1 번으로 답하기</span>
+          </div>
+          <div class="nav-handle" style="position:absolute; left:0; right:0; bottom:0; z-index:42"></div>
+        </div>
+      </div>
+      <div class="step-label">① 권한 요청</div>
+      <div class="device-label">서브에이전트가 묻는 권한도 화면에서 잡는다</div>
+    </div>
+
+    <!-- 2 질문 -->
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.72">
+        <div class="screen">
+          <div class="status-bar" data-time="9:42"></div>
+          <div class="app-bar">
+            <span class="icon-btn"><i data-icon="arrow-left"></i></span>
+            <span class="title ellipsis">회의 메모 요약기</span>
+            <span class="spacer"></span>
+            <span class="tag warn">질문 대기</span>
+          </div>
+          <div class="content">
+            <div class="chat">
+              <div class="msg">요약 형식을 두 가지 정해 주세요.</div>
+            </div>
+          </div>
+          <div class="scrim"></div>
+          <div class="sheet">
+            <div class="sheet-handle"></div>
+            <div class="steps"><span class="on"></span><span class="on"></span><span></span></div>
+            <div class="caption">질문 2 / 2 · 여러 개 선택</div>
+            <div class="sheet-title">요약에 무엇을 넣을까요?</div>
+            <div class="opt on"><span class="box on">✓</span><div class="grow">결정 사항<div class="d">회의에서 확정된 것만 한 줄씩</div></div></div>
+            <div class="opt on"><span class="box on">✓</span><div class="grow">할 일과 담당자<div class="d">민지 · 서준 이름을 그대로</div></div></div>
+            <div class="opt"><span class="box"></span><div class="grow">전체 발언 요약<div class="d">길어지지만 맥락이 남습니다</div></div></div>
+            <div class="opt"><span class="box"></span><div class="grow">기타 — 직접 입력</div></div>
+            <span class="btn btn-primary btn-block"><i data-icon="send"></i>답 보내기</span>
+          </div>
+          <div class="nav-handle" style="position:absolute; left:0; right:0; bottom:0; z-index:42"></div>
+        </div>
+      </div>
+      <div class="step-label">② 질문(AskUserQuestion)</div>
+      <div class="device-label">단일·다중 선택, 기타 직접 입력까지</div>
+    </div>
+
+    <!-- 3 검토 -->
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.72">
+        <div class="screen">
+          <div class="status-bar" data-time="9:42"></div>
+          <div class="app-bar">
+            <span class="icon-btn"><i data-icon="arrow-left"></i></span>
+            <span class="title ellipsis">회의 메모 요약기</span>
+            <span class="spacer"></span>
+            <span class="tag ok">제출됨</span>
+          </div>
+          <div class="content">
+            <div class="card ok">
+              <div class="card-row"><i data-icon="circle-check"></i><span class="card-title">검토 화면 대조 통과</span></div>
+              <div class="meta">맥 화면의 답이 폰에서 고른 답과 같아서 Submit 을 눌렀습니다</div>
+            </div>
+            <div class="section-label">맥 화면의 검토</div>
+            <div class="cmd">● 어떤 형식으로 요약할까요?
+  → 글머리표
+● 요약에 무엇을 넣을까요?
+  → 결정 사항, 할 일과 담당자
+
+❯ 1. Submit answers
+  2. Cancel</div>
+            <div class="card warn">
+              <div class="card-row"><i data-icon="alert"></i><span class="card-title">다르면 여기서 멈춥니다</span></div>
+              <div class="meta">답이 어긋나면 제출하지 않고 화면을 그대로 보여 준 뒤 직접 고르게 합니다</div>
+            </div>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+      <div class="step-label">③ 대조 후 제출</div>
+      <div class="device-label">한 키마다 화면을 다시 읽는 폐루프</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

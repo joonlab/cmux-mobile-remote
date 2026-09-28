@@ -1,0 +1,14 @@
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+←  ☒ Color  ☒ Fruit  ✔ Submit  →
+
+Review your answers
+
+ ● Which color?
+   → Green
+ ● Which fruits?
+   → Apple, Cherry
+
+Ready to submit your answers?
+
+❯ 1. Submit answers
+  2. Cancel

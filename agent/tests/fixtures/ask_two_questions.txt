@@ -1,0 +1,44 @@
+
+ ▐▛███▛█   Claude Code v2.1.282
+▝▜██████▀  Haiku 4.5 · Claude Max
+ ▝▝   ▝▝   /tmp/cmr-test
+
+
+❯ Use the Write tool to create hello.txt containing 'hi'. Do nothing else.                                                                  
+
+⏺ Write(/tmp/cmr-test/hello.txt)
+  ⎿  User rejected write to /tmp/cmr-test/hello.txt
+      1 hi
+
+✻ Cooked for 4s · done 4:24 AM
+
+❯ Try the same Write again now.                                                                                                             
+
+⏺ Write(/tmp/cmr-test/hello.txt)
+  ⎿  Wrote 1 line to /tmp/cmr-test/hello.txt
+      1 hi
+
+⏺ 완료했습니다. hello.txt 파일이 생성되었습니다.
+
+✻ Worked for 4s · done 4:24 AM
+
+❯ Call the AskUserQuestion tool once with exactly two questions: Q1 header 'Color', question 'Which color?', single select, options Red,    
+  Green, Blue (each with a short description). Q2 header 'Fruit', question 'Which fruits?', multiSelect true, options Apple, Banana,        
+  Cherry. Then after the answer just repeat my answers verbatim.                                                                            
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+←  ☐ Color  ☐ Fruit  ✔ Submit  →
+
+Which color?
+
+❯ 1. Red
+     A warm, vibrant color
+  2. Green
+     A cool, natural color                                                                                                    
+  3. Blue
+     A calm, peaceful color
+  4. Type something.
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+  
+Enter to select · Tab/Arrow keys to navigate · Esc to cancel
+

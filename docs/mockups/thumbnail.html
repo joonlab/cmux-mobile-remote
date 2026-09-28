@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="shot" content="w=1600,h=900,scale=2">
+<title>cmux 모바일 관제실 — 썸네일</title>
+<link rel="stylesheet" href="https://mockup-kit.invalid/kit.css">
+<script src="https://mockup-kit.invalid/kit.js"></script>
+<style>
+  .wrap2 { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:70px; padding:0 80px; }
+  .left { width: 620px; display:flex; flex-direction:column; gap:18px; }
+  .big { font-size:54px; line-height:66px; font-weight:800; letter-spacing:-1px; color:#16201D; }
+  .big em { font-style:normal; color: var(--accent); }
+  .sub { font-size:22px; line-height:34px; color:#4A5652; word-break:keep-all; }
+  .pills { display:flex; flex-wrap:wrap; gap:10px; }
+  .pills span { font-size:16px; padding:8px 14px; border-radius:999px; background:#fff; border:1px solid #D5DDDA; color:#2A3431; }
+  .tab { display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:12px; background:var(--panel); border:1px solid var(--border); }
+  .tab .ico { font-size:18px; margin-top:2px; }
+  .tab .t { font-size:14px; font-weight:600; line-height:20px; }
+  .tab .s { font-size:12px; color:var(--dim); line-height:17px; }
+  .tab.lock { border-color: color-mix(in srgb, var(--warn) 55%, transparent); background: color-mix(in srgb, var(--warn) 10%, var(--panel)); }
+  .tab.lock .ico { color: var(--warn); }
+  .tab.run .ico { color: var(--accent); }
+  .col-list { display:flex; flex-direction:column; gap:8px; }
+  .sec { display:flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; color:var(--dim); margin-top:4px; }
+  .sec .n { margin-left:auto; font-weight:600; }
+</style>
+</head>
+<body>
+<div class="canvas thumb app-cmux desk-accent">
+  <div class="wrap2">
+    <div class="left">
+      <div class="row gap-8"><img class="app-icon md" data-app="cmux" alt=""><span style="font-size:20px; font-weight:700; color:#2A3431">cmux 모바일 관제실</span></div>
+      <div class="big">폰 한 대로<br>두 맥의 <em>Claude Code</em><br>세션을 본다</div>
+      <div class="sub">권한 요청과 질문에 폰에서 답하고, 메시지를 보내고, 워크스페이스를 만든다.</div>
+      <div class="pills"><span>Galaxy Z Fold8</span><span>macOS · cmux</span><span>Tailscale</span><span>FastAPI + Compose</span></div>
+    </div>
+    <div class="dark">
+      <div class="fold-cover" style="--zoom:.8">
+        <div class="screen">
+          <div class="status-bar" data-time="9:41"></div>
+          <div class="app-bar">
+            <img class="mark" data-app="cmux" alt="">
+            <span class="title">관제실</span>
+            <span class="spacer"></span>
+            <span class="icon-btn"><i data-icon="plus"></i></span>
+          </div>
+          <div class="content">
+            <div class="card warn">
+              <div class="card-row"><i data-icon="lock"></i><span class="card-title">나를 기다림 2</span></div>
+              <div class="meta">노트북 질문 1 · 홈맥 권한 1</div>
+            </div>
+            <div class="sec"><i data-icon="laptop"></i>노트북<span class="n">claude 12</span></div>
+            <div class="col-list">
+              <div class="tab lock"><i class="ico" data-icon="lock"></i><div class="grow"><div class="t ellipsis">장보기 앱 리팩터</div><div class="s ellipsis">질문 대기</div></div></div>
+              <div class="tab run"><i class="ico" data-icon="refresh"></i><div class="grow"><div class="t ellipsis">회의 메모 요약기</div><div class="s ellipsis">작업 중 · 2분</div></div></div>
+            </div>
+            <div class="sec"><i data-icon="monitor"></i>홈맥<span class="n">claude 5</span></div>
+            <div class="col-list">
+              <div class="tab lock"><i class="ico" data-icon="lock"></i><div class="grow"><div class="t ellipsis">사진 정리 스크립트</div><div class="s ellipsis">권한 대기 · Bash</div></div></div>
+              <div class="tab run"><i class="ico" data-icon="sparkle"></i><div class="grow"><div class="t ellipsis">블로그 초안 다듬기</div><div class="s ellipsis">뒤에서 에이전트 2</div></div></div>
+            </div>
+          </div>
+          <div class="nav-handle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 에이전트 실행 기록·개인 데이터 (감사 로그, 화면 적립, 스니펫, pm2 로그)
+agent/data/
+agent/.env
+*.log
+*.jsonl
+runs/
+_data/
+
+# 관제실 모듈은 따로 받는다 (README «설치» 참고)
+vendor/
+
+# android
+android/.gradle/
+android/build/
+android/app/build/
+android/core/build/
+android/local.properties
+android/.idea/
+.idea/
+*.iml
+*.apk
+*.aab
+.kotlin/
+
+# 기타
+node_modules/
+.DS_Store
+_trash/

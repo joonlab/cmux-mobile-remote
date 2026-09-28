@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 생성물: 폴드 앱 패밀리 아이콘 생성기(이 저장소 밖)에서 만든 벡터 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <group android:pivotX="54" android:pivotY="54" android:scaleX="0.740" android:scaleY="0.740">
+    <path android:pathData="M42,30 L72,54 L42,78 L42,65 L56,54 L42,43 Z" android:strokeWidth="2.4" android:strokeLineJoin="round">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="30" android:startY="24" android:endX="80" android:endY="84"
+                android:startColor="#4FC3F7" android:endColor="#5B5BEA" />
+        </aapt:attr>
+        <aapt:attr name="android:strokeColor">
+            <gradient android:type="linear" android:startX="30" android:startY="24" android:endX="80" android:endY="84"
+                android:startColor="#4FC3F7" android:endColor="#5B5BEA" />
+        </aapt:attr>
+    </path>
+    </group>
+</vector>

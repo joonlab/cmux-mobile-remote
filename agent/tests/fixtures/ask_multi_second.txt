@@ -1,0 +1,17 @@
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+←  ☒ Color  ☐ Fruit  ✔ Submit  →
+
+Which fruits?
+
+❯ 1. [ ] Apple
+         A crisp, sweet fruit
+  2. [ ] Banana
+         A soft, creamy fruit
+  3. [ ] Cherry
+         A small, tart fruit
+  4. [ ] Type something
+     Submit
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  5. Chat about this
+
+Enter to select · Tab/Arrow keys to navigate · Esc to cancel
