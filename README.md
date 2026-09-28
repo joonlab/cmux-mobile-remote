@@ -43,7 +43,13 @@
 ![대화 보기, 화면 보기(적립된 화면 + 지금 화면), 여러 줄 보내기](docs/images/screen.png)
 화면은 설명용 목업입니다.
 
-<!-- VIDEO -->
+<!-- VIDEO:START -->
+### 홍보 영상
+
+[![홍보 영상 미리보기 — 누르면 전체 영상(가로 16:9, 64초)이 재생됩니다](docs/images/video-preview.webp)](https://pub-81d14e6ebfb841109968e9c0ee057d1b.r2.dev/android-mac-lab/videos/cmux-mobile-remote/cmux-mobile-remote_16x9.mp4)
+
+▶ [가로 16:9 · 64초](https://pub-81d14e6ebfb841109968e9c0ee057d1b.r2.dev/android-mac-lab/videos/cmux-mobile-remote/cmux-mobile-remote_16x9.mp4) · ▶ [세로 9:16 · 62초](https://pub-81d14e6ebfb841109968e9c0ee057d1b.r2.dev/android-mac-lab/videos/cmux-mobile-remote/cmux-mobile-remote_9x16.mp4) — 영상 속 화면은 설명용 목업이고, 책상 사진은 AI로 만든 배경입니다.
+<!-- VIDEO:END -->
 
 ## 기능
 
