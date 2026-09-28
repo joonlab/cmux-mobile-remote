@@ -1,0 +1,54 @@
+/* 책상 장면(scenes)용 화면 — 합성되면 작아지므로 평소보다 크게 그린다 */
+html, body { width: 100%; height: 100%; overflow: hidden; }
+
+/* 폰: 화면 한 장을 캔버스 가득 */
+.phone { width: 100vw; height: 100vh; }
+.phone .screen { width: 100%; height: 100%; }
+.sec { display:flex; align-items:center; gap:7px; font-size:13px; font-weight:700; color:var(--dim); margin-top:2px; }
+.sec .n { margin-left:auto; font-weight:600; }
+.col-list { display:flex; flex-direction:column; gap:7px; }
+.tab { display:flex; gap:9px; align-items:flex-start; padding:9px 11px; border-radius:12px; background:var(--panel); border:1px solid var(--border); }
+.tab .ico { font-size:18px; margin-top:2px; flex:none; }
+.tab .t { font-size:15px; font-weight:700; line-height:20px; }
+.tab .s { font-size:12.5px; color:var(--dim); line-height:17px; }
+.tab.lock { border-color: color-mix(in srgb, var(--warn) 55%, transparent); background: color-mix(in srgb, var(--warn) 11%, var(--panel)); }
+.tab.lock .ico { color: var(--warn); }
+.tab.run .ico { color: var(--accent); }
+.tab.sel { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.grow { flex:1; min-width:0; }
+.ellipsis { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.askcard { border:1px solid color-mix(in srgb, var(--warn) 55%, transparent); background: color-mix(in srgb, var(--warn) 9%, var(--panel)); border-radius:14px; padding:11px; display:flex; flex-direction:column; gap:7px; }
+.opt { padding:8px 11px; border-radius:10px; background:var(--panel2); border:1px solid var(--border); font-size:14px; line-height:19px; }
+.opt.on { border-color: var(--accent); background: var(--accent-tint); font-weight:600; }
+.opt .k { color: var(--dim); margin-right:8px; font-variant-numeric: tabular-nums; }
+
+/* 맥: macOS 데스크톱(메뉴바 + 바탕 + 창) */
+.desk { position:relative; width:100vw; height:100vh; overflow:hidden;
+  background: linear-gradient(150deg, #2B3A4A 0%, #3E4B5C 45%, #5A5F6E 100%); }
+.desk > .mac-menubar { position:absolute; top:0; left:0; right:0; z-index:5; height:34px; font-size:15px;
+  background: rgba(30,32,38,.72); color:#EDEFF2; border-bottom:0; }
+.desk > .mac-menubar .clock { font-size:15px; }
+.desk > .mac-menubar .extra { font-size:17px; }
+.cmux { position:absolute; display:flex; flex-direction:column; overflow:hidden;
+  background:#111316; color:#D6DAE0; border:1px solid #2A2E34; border-radius:12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.35); color-scheme: dark; }
+.cmux .bar { flex:none; height:38px; display:flex; align-items:center; gap:10px; padding:0 14px; background:#181A1E; border-bottom:1px solid #25282D; position:relative; }
+.cmux .bar .ttl { position:absolute; left:90px; right:90px; text-align:center; font-size:14px; font-weight:600; color:#8A929C; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.cmux .main { flex:1; min-height:0; display:flex; }
+.cmux .side { flex:none; background:#15171B; border-right:1px solid #25282D; padding:12px 8px; display:flex; flex-direction:column; gap:4px; font-size:15px; }
+.cmux .side .h { font-size:12px; font-weight:700; color:#7C8591; padding:4px 8px 6px; }
+.cmux .side .w { padding:7px 10px; border-radius:8px; display:flex; align-items:center; gap:8px; color:#C9CED6; white-space:nowrap; }
+.cmux .side .w.on { background:rgba(255,255,255,.09); color:#F2F4F7; font-weight:700; }
+.cmux .side .w .dt { width:8px; height:8px; border-radius:50%; flex:none; background:#5B6470; }
+.cmux .side .w .dt.q { background:#E6C97E; }
+.cmux .side .w .dt.r { background:var(--accent-d); }
+.cmux .panes { flex:1; min-width:0; display:flex; flex-direction:column; }
+.cmux .tabs { flex:none; display:flex; gap:2px; padding:6px 8px 0; background:#15171B; border-bottom:1px solid #25282D; font-size:13.5px; }
+.cmux .tabs span { padding:6px 12px; border-radius:8px 8px 0 0; color:#8A929C; white-space:nowrap; }
+.cmux .tabs span.on { background:#111316; color:#F2F4F7; font-weight:600; }
+.cmux .term { flex:1; min-height:0; padding:14px 18px; font-family: var(--mono); white-space:pre; overflow:hidden; }
+.cmux .term + .term { border-top:1px solid #25282D; }
+.term .d { color:#7C8591; } .term .g { color:#5ED18A; } .term .a { color:var(--accent-d); }
+.term .y { color:#E6C97E; } .term .b { font-weight:700; color:#F2F4F7; }
+.term .box { display:inline-block; }
+.flash { box-shadow: inset 0 0 0 2px var(--accent-d); }

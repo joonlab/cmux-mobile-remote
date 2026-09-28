@@ -9,3 +9,5 @@ node android-mac-lab/mockup-kit/shot.mjs --batch docs/mockups   # → docs/image
 ```
 
 킷 사용법: https://github.com/joonlab/android-mac-lab/tree/main/mockup-kit
+
+`scenes/` 는 README «실제로 이렇게 씁니다» 의 책상 장면에 합성한 화면입니다(`*-mac.html` 맥 화면, `*-phone.html` 폰 화면). 합성된 결과는 `docs/images/scenes/*.jpg` 입니다.
