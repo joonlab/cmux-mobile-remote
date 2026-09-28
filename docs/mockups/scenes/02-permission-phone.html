@@ -1,35 +1,45 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8">
-<meta name="shot" content="w=470,h=457,scale=3">
+<!-- 폴드8 펼친 화면(가로 1.35:1) — 배경 F_close_open -->
+<meta name="shot" content="w=640,h=473,scale=2.8">
 <link rel="stylesheet" href="https://mockup-kit.invalid/kit.css">
 <script src="https://mockup-kit.invalid/kit.js"></script>
 <link rel="stylesheet" href="scene.css">
 </head><body>
 <style>
-  .sheet { margin-top:auto; background:var(--panel); border-top:1px solid var(--border); border-radius:20px 20px 0 0; padding:8px 16px 14px; display:flex; flex-direction:column; gap:8px; }
-  .handle { width:36px; height:4px; border-radius:2px; background:var(--border); align-self:center; }
-  .code { font-family:var(--mono); font-size:14px; line-height:20px; background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:8px 11px; }
-  .opt { font-size:15px; }
+  .sheet { margin-top:auto; background:var(--panel); border:1px solid color-mix(in srgb, var(--warn) 55%, transparent); border-radius:16px; padding:10px 14px 12px; display:flex; flex-direction:column; gap:7px; }
+  .code { font-family:var(--mono); font-size:15px; line-height:21px; background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:7px 11px; }
+  .opt { font-size:15px; padding:7px 11px; }
+  .tab .t { font-size:16px; line-height:21px; }
+  .tab .s { font-size:13px; }
 </style>
 <div class="phone dark app-cmux"><div class="screen">
   <div class="status-bar" data-time="10:12"></div>
   <div class="app-bar">
-    <i data-icon="arrow-left" style="font-size:22px"></i>
-    <span class="title" style="font-size:19px">사진 정리 스크립트</span>
+    <img class="mark" data-app="cmux" alt="">
+    <span class="title" style="font-size:19px">관제실</span>
     <span class="spacer"></span>
-    <span class="tag warn" style="font-size:12.5px; line-height:16px; margin-right:10px">홈맥 · 권한 대기</span>
+    <span class="tag warn" style="font-size:13px; line-height:17px; margin-right:12px">홈맥 · 권한 대기</span>
   </div>
-  <div style="flex:1; min-height:0; display:flex; flex-direction:column; padding:10px 16px 0; gap:8px">
-    <div class="msg me" style="font-size:15px">중복 사진 찾아서 폴더로 옮기는 스크립트 돌려 봐</div>
-  </div>
-  <div class="sheet">
-    <div class="handle"></div>
-    <div class="row" style="gap:8px; font-size:17px; font-weight:700"><i data-icon="lock" style="color:var(--warn)"></i>Bash 를 실행할까요?</div>
-    <div class="code">python3 organize.py --dry-run</div>
-    <div class="opt on"><span class="k">1</span>Yes</div>
-    <div class="opt"><span class="k">2</span>Yes, and don't ask again</div>
-    <div class="opt"><span class="k">3</span>No</div>
-    <div class="btn btn-primary btn-block" style="height:42px; font-size:16px"><i data-icon="check"></i>1번 보내기</div>
+  <div class="two-pane" style="grid-template-columns: 210px 1fr">
+    <div class="pane" style="padding:10px 9px 10px 12px; gap:7px">
+      <div class="sec" style="font-size:14px"><i data-icon="lock"></i>나를 기다림<span class="n">1</span></div>
+      <div class="tab lock sel"><i class="ico" data-icon="lock"></i><div class="grow"><div class="t ellipsis">사진 정리</div><div class="s ellipsis">홈맥 · 권한</div></div></div>
+      <div class="sec" style="font-size:14px"><i data-icon="zap"></i>진행 중<span class="n">2</span></div>
+      <div class="tab run"><i class="ico" data-icon="refresh"></i><div class="grow"><div class="t ellipsis">회의 메모</div><div class="s ellipsis">노트북 · 2분</div></div></div>
+      <div class="tab run"><i class="ico" data-icon="sparkle"></i><div class="grow"><div class="t ellipsis">블로그 초안</div><div class="s ellipsis">홈맥 · 에이전트 2</div></div></div>
+    </div>
+    <div class="pane" style="padding:10px 12px 12px 10px; gap:8px">
+      <div class="msg me" style="font-size:15px">중복 사진 찾아서 폴더로 옮기는 스크립트 돌려 봐</div>
+      <div class="sheet">
+        <div class="row" style="gap:8px; font-size:17px; font-weight:700"><i data-icon="lock" style="color:var(--warn)"></i>Bash 를 실행할까요?</div>
+        <div class="code">python3 organize.py --dry-run</div>
+        <div class="opt on"><span class="k">1</span>Yes</div>
+        <div class="opt"><span class="k">2</span>Yes, and don't ask again</div>
+        <div class="opt"><span class="k">3</span>No</div>
+        <div class="btn btn-primary btn-block" style="height:40px; font-size:16px"><i data-icon="check"></i>1번 보내기</div>
+      </div>
+    </div>
   </div>
 </div></div>
 </body></html>
